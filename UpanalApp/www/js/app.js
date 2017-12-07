@@ -31,19 +31,19 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl'
       })
-      
-      .state('app.playlists', {
-        url: '/playlists',
+
+      .state('app.installation', {
+        url: '/installation',
         views: {
           'menuContent': {
-            templateUrl: 'templates/playlists.html',
-            controller: 'PlaylistsCtrl'
+            templateUrl: 'templates/installation.html',
+            controller: 'installationCtrl'
           }
         }
       })
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/playlists');
+    $urlRouterProvider.otherwise('/app/installation');
   });
 
 
