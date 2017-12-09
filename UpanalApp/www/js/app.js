@@ -4,7 +4,22 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
+angular.module('starter', 
+['ionic',
+  'ionic-material',
+  'starter.controllers',
+  'starter.factory',
+  'starter.login',
+  'starter.installation',
+  'starter.breakDown',
+  'starter.pm',
+  'starter.inbox',
+  'starter.attendance',
+  'starter.settings',
+  'starter.mediaUpload',
+  'starter.registrationCall',
+  'starter.assignCall'
+])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -25,6 +40,12 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
+      .state('login', {
+        url: '/login',
+        templateUrl: "templates/login.html",
+        controller: "loginCtrl"
+      })
+
       .state('app', {
         url: '/app',
         abstract: true,
@@ -32,18 +53,89 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
         controller: 'AppCtrl'
       })
 
-      .state('app.installation', {
-        url: '/installation',
+
+      .state('app.home', {
+        url: '/home',
         views: {
           'menuContent': {
-            templateUrl: 'templates/installation.html',
-            controller: 'installationCtrl'
+            templateUrl: 'templates/home.html',
+            controller: 'homeCtrl'
+          }
+        }
+      })
+
+
+      .state('installation', {
+        url: '/installation',
+        abstract: false,
+        templateUrl: 'templates/installation.html',
+        controller: 'installationCtrl'
+      })
+
+      .state('breakDown', {
+        url: '/breakDown',
+        abstract: false,
+        templateUrl: 'templates/breakDown.html',
+        controller: 'breakDownCtrl'
+      })
+
+      .state('pm', {
+        url: '/pm',
+        abstract: false,
+        templateUrl: 'templates/pm.html',
+        controller: 'pmCtrl'
+      })
+
+      .state('inbox', {
+        url: '/inbox',
+        abstract: false,
+        templateUrl: 'templates/inbox.html',
+        controller: 'inboxCtrl'
+      })
+
+      .state('attendance', {
+        url: '/attendance',
+        abstract: false,
+        templateUrl: 'templates/attendance.html',
+        controller: 'attendanceCtrl'
+      })
+
+      .state('settings', {
+        url: '/settings',
+        abstract: false,
+        templateUrl: 'templates/settings.html',
+        controller: 'settingsCtrl'
+      })
+
+      .state('mediaUpload', {
+        url: '/mediaUpload',
+        abstract: false,
+        templateUrl: 'templates/mediaUpload.html',
+        controller: 'mediaUploadCtrl'
+      })
+
+      .state('app.registrationCall', {
+        url: '/registrationCall',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/registrationCall.html',
+            controller: 'registrationCallCtrl'
+          }
+        }
+      })
+
+      .state('app.assignCall', {
+        url: '/assignCall',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/assignCall.html',
+            controller: 'assignCallCtrl'
           }
         }
       })
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/installation');
+    $urlRouterProvider.otherwise('/login');
   });
 
 
