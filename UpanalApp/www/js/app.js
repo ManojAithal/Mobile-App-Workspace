@@ -9,6 +9,7 @@ angular.module('starter',
   'ionic-material',
   'starter.controllers',
   'starter.factory',
+  'starter.factory2',
   'starter.login',
   'starter.installation',
   'starter.breakDown',
@@ -18,7 +19,8 @@ angular.module('starter',
   'starter.settings',
   'starter.mediaUpload',
   'starter.registrationCall',
-  'starter.assignCall'
+  'starter.assignCall',
+  'starter.assignedCall'
 ])
 
   .run(function ($ionicPlatform) {
@@ -130,6 +132,16 @@ angular.module('starter',
           'menuContent': {
             templateUrl: 'templates/assignCall.html',
             controller: 'assignCallCtrl'
+          }
+        }
+      })
+
+      .state('app.assignedCall', {
+        url: '/assignedCall',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/assignedCall.html',
+            controller: 'assignedCallCtrl'
           }
         }
       })

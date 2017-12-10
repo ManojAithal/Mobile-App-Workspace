@@ -15,19 +15,18 @@ angular.module('starter.controllers', ['ionic-material'])
 
 
 
-.controller('homeCtrl', function($scope) {
-  $scope.upanal = {
-    machineDetails : {
-      machineMake : 'abc',
-      machineModel : 'xyz',
-      machineSlNo : '12312'
-    },
-    customerDetails :{
+.controller('homeCtrl', function($scope,loginFactory) {
+  // $scope.upanal = {
+  //   machineDetails : {
+  //     machineMake : 'abc',
+  //     machineModel : 'xyz',
+  //     machineSlNo : '12312'
+  //   },
+  //   customerDetails :{
       
-    }
+  //   }
 
-  }
-})
+  // }
+  $scope.adminUserFlag = loginFactory.getter();
 
-// .controller('PlaylistCtrl', function($scope, $stateParams) {
-// });
+});
