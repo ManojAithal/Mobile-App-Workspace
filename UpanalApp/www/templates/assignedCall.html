@@ -1,0 +1,49 @@
+<ion-view view-title="AssignedCall">
+    <ion-content>
+        <div class="row stable-bg">
+            <div class="col"></div>
+            <div class="col col-30">
+                <h5>
+                    <center>
+                        <b>Customer Name</b>
+                    </center>
+                </h5>
+            </div>
+            <div class="col ">
+                <h5>
+                    <center>
+                        <b>Priority</b>
+                    </center>
+                </h5>
+            </div>
+            <div class="col ">
+                <h5>
+                    <center>
+                        <b>Status</b>
+                    </center>
+                </h5>
+            </div>
+        </div>
+        <div class="list">
+            <a class="item stable-bg" ng-repeat="service in upanal track by $index" ng-click="userServiceSelection($index)">
+                
+                    <div class="row">
+                        <div class="col">
+                            {{$index + 1}}
+                        </div>
+                        <div class="col col-30">
+                            <center >{{service.customer.name}}</center>
+
+                        </div>
+                        <div class="col">
+                            <center >{{service.generic.priority}}</center>
+                        </div>
+                        <div class="col">
+                            <center >{{service.generic.status}}</center>
+                        </div>
+                    </div>
+            </a>
+            </div>
+
+    </ion-content>
+</ion-view>

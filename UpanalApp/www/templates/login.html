@@ -1,0 +1,61 @@
+<ion-view view-title="login">
+  <ion-content style="background: url(./img/material2.jpg)no-repeat center center fixed;background-size: cover;">
+     
+     <div >
+
+                  <div class="row">
+                      <div class="col col-20"></div>
+                      <div class="col col-60">
+                         <center>
+                              <img src="./img/Logo_yellow.png" style="width: 50%;height: auto; margin-top: 5%; ">
+                         </center>
+                      </div>
+                      <div class="col col-20"></div>
+                  </div>
+
+                  <div class="list card stable-bg" id="loginCard" style="border-radius: 5px;" >
+                        <div class="list">
+                            
+                            <label class="item item-input item-floating-label">
+                                <span class="input-label" style="color: #26468f;"><b>Email id / Phonenumber</b></span>
+                                <input type="text" placeholder="Email id / Phonenumber" ng-model="upanal.userName" style="font-weight:300;font-size: 20px;">
+                            </label>
+                            <label class="item item-input item-floating-label">
+                                <span class="input-label" style="color: #26468f;"><b>Password</b></span>
+                                <input type="password" placeholder="Password" ng-model="upanal.password" style="font-weight:300;font-size: 20px;">
+                            </label>
+                        </div>
+                  </div>
+
+                  <div class="row">
+                        <div class="col col-20"></div>
+                        <div class="col col-60">
+                            <center>
+                                <button class="button button-fab button-balanced icon ion-android-arrow-forward" style="background-color: #26468f;margin-top: 10%;box-shadow: 2px 2px 5px black;"  ng-click="signIn(upanal)"></button>
+                            </center>
+                        </div>
+                        <div class="col col-20"></div>
+                  </div>
+<br>
+<br>
+                  <div class="row">
+                        <div class="col col-25"></div>
+                        <div class="col col-50">
+                            <center>
+                                <p><a href=""  style="color: white"><b>Forgot Password ?</b></a></p>
+                            </center>
+                        </div>
+                        <div class="col col-25"></div>
+                  </div>
+
+     </div>
+
+
+     
+  </ion-content>
+
+  <div class="bar bar-footer bar-stable" style="position: fixed;bottom: 0;">
+                <div class="title" style="font-size: 12px;color: #26468f">Copyright © 2017 Upanal CNC Solutions</div>
+  </div>
+
+</ion-view>

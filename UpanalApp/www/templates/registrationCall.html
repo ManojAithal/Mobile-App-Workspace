@@ -1,0 +1,116 @@
+<ion-view view-title="Registrations">
+    <ion-content>
+        <div class="row">
+            <div class="col card">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        <b>Modes</b>
+                    </div>
+                    <select ng-model="upanal.generic.mode">
+                        <option>Service</option>
+                        <option selected>Sales</option>
+                        <option>Casual</option>
+                        <option>Payment Follow up</option>
+                        <option>Others</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col card list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-cube"></i>&nbsp;Machine Make</span>
+                    <input type="text" placeholder="Machine Make" ng-model="upanal.machine.make">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-cube"></i>&nbsp;Machine Model</span>
+                    <input type="text" placeholder="Machine Model" ng-model="upanal.machine.model">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-cube"></i>&nbsp;Machine Serial No.</span>
+                    <input type="text" placeholder="Machine Serial No" ng-model="upanal.machine.serialNo">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-person"></i>&nbsp;Customer Name</span>
+                    <input type="text" placeholder="Customer Name" ng-model="upanal.customer.name">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col card">
+                <i class="icon ion-bug"></i>&nbsp;Problem/Issue
+                <textarea rows="4" cols="50" placeholder="Problem/Issue" ng-model="upanal.machine.problemOrIssue"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col card">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        <b>Priority</b>
+                    </div>
+                    <select ng-model="upanal.generic.priority">
+                        <option>High</option>
+                        <option selected>Medium</option>
+                        <option>Low</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col card list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-android-contacts"></i>&nbsp;Contact Number</span>
+                    <input type="text" placeholder="Contact Number" ng-model="upanal.customer.contactNumber">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-email-unread"></i>&nbsp;Email Id</span>
+                    <input type="text" placeholder="Email Id" ng-model="upanal.customer.email">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col card list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-android-contacts"></i>&nbsp;Address Line 1</span>
+                    <input type="text" placeholder="Address Line 1" ng-model="upanal.customer.address.addressLine1">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-android-contacts"></i>&nbsp;Address Line 2</span>
+                    <input type="text" placeholder="Address Line 2" ng-model="upanal.customer.address.addressLine2">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-android-contacts"></i>&nbsp;City</span>
+                    <input type="text" placeholder="City" ng-model="upanal.customer.address.city">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-android-contacts"></i>&nbsp;Country</span>
+                    <input type="text" placeholder="Country" ng-model="upanal.customer.address.country">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">
+                        <i class="icon ion-android-contacts"></i>&nbsp;Pin code</span>
+                    <input type="number" placeholder="Pin Code" ng-model="upanal.customer.address.pin">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <center>
+                    <button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="registrationSubmit()">
+                        Submit
+                    </button>
+                </center>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
